@@ -5,64 +5,69 @@
 \usepackage[left=1.2in, bottom=0.8in, top=1.0in, right=0.1in]{geometry}
 \usepackage{fontspec}
 \setmainfont{Calibri}
+\usepackage{datatool}
 
 \begin{document}
+\DTLloaddb{names}{namelist.csv}
 \begin{landscape}
-\thispagestyle{empty}
+\pagestyle{empty}
+\DTLforeach{names}{\first=first, \last=last, \eorg=org-en, \forg=org-fr, \eclass=class-en, \fclass=class-fr, \date=date}{
+	\Huge\textbf{Certificate of Achievement}
+	\hfill\textbf{Certificat de Réussite}
 
-\Huge\textbf{Certificate of Achievement}
-\hfill\textbf{Certificat de Réussite}
+	\vspace{0.4in}
 
-\vspace{0.4in}
+	\LARGE\textbf{\eclass}
+	\hfill\textbf{\fclass}
 
-\LARGE\textbf{Lean Government White Belt}
-\hfill\textbf{Ceinture Blanche en Lean au}
+	\vspace{0.2in}
 
-\vspace{0.2in}
+	\hfill\textbf{Gouvernement}
 
-\hfill\textbf{Gouvernement}
+	\vspace{0.5in}
 
-\vspace{0.5in}
+	\normalsize\textbf{This certificate is awarded to:}
+	\hfill\textbf{Ce certificat est décerné à}
 
-\normalsize\textbf{This certificate is awarded to:}
-\hfill\textbf{Ce certificat est décerné à}
+	\vspace{0.08in}
 
-\vspace{0.08in}
+	\center\huge\textbf{\first \ \last}
 
-\center\huge\textbf{Amarkai Laryea}
+	\vspace{0.25in}
 
-\vspace{0.25in}
+	\large\textbf{\eorg \ / \forg}
 
-\large\textbf{Administrative Tribunals Support Service of Canada / Service canadien d'appui aux tribunaux administratifs}
+	\vspace{\baselineskip}
 
-\vspace{\baselineskip}
+	\large\textbf{\date}
 
-\large\textbf{09/06/2021}
+	\vspace{\baselineskip}
 
-\vspace{\baselineskip}
+	\includegraphics[width=4.06307in,height=0.78136in]{image1.png}
 
-\includegraphics[width=4.06307in,height=0.78136in]{image1.png}
+	\vspace{\baselineskip}
 
-\vspace{\baselineskip}
+	\includegraphics[width=1.35821in,height=0.39299in]{image2.jpeg}
 
-\includegraphics[width=1.35821in,height=0.39299in]{image2.jpeg}
+	\vspace{\baselineskip}
 
-\vspace{\baselineskip}
+	\textbf{Craig Szelestowski}
 
-\textbf{Craig Szelestowski}
+	\textbf{President/ Président}
 
-\textbf{President/ Président}
+	\textbf{Lean Agility Inc.}
 
-\textbf{Lean Agility Inc.}
+	\vspace{\baselineskip}
 
-\vspace{\baselineskip}
+	\flushleft\small\textbf{Faster, better, more efficient government and inspired people}
+	\hfill\textbf{Des gens motivés, une administration publique efficace}
 
-\flushleft\small\textbf{Faster, better, more efficient government and inspired people}
-\hfill\textbf{Des gens motivés, une administration publique efficace}
+	\vspace{0.3in}
 
-\vspace{0.3in}
+	\center\small\emph{7.5 training hours/7,5 heures de formation}
 
-\center\small\emph{7.5 training hours/7,5 heures de formation}
+	\vspace{\baselineskip}
+}
 
 \end{landscape}
 \end{document}
