@@ -1,4 +1,9 @@
 # le-cert
 Generate and send certificates with an Excel macro
 
-https://community.spiceworks.com/how_to/150253-send-mail-from-powershell-using-outlook
+1. Install texlive
+2. Enable Outlook in VBA References
+3. Import macro file
+4. Run shortcut macro
+
+https://www.wallstreetmojo.com/vba-send-email-from-excel/
